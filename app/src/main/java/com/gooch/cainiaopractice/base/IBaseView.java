@@ -11,7 +11,6 @@ package com.gooch.cainiaopractice.base;
  */
 
 public interface IBaseView {
-    void toast(String msg);
 
     void showLoading();
 

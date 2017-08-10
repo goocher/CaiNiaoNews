@@ -1,6 +1,8 @@
 package com.gooch.cainiaopractice.presenter;
 
+import com.gooch.cainiaopractice.base.BasePresenter;
 import com.gooch.cainiaopractice.contract.MainContract;
+import com.gooch.cainiaopractice.model.MainModel;
 
 /**
  * <pre>
@@ -12,5 +14,14 @@ import com.gooch.cainiaopractice.contract.MainContract;
  * </pre>
  */
 
-public class MainPresenter implements MainContract.Presenter {
+public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
+
+    private MainModel mModel;
+
+    @Override
+    public void attachView(MainContract.View baseView) {
+        super.attachView(baseView);
+        mModel = new MainModel();
+    }
+
 }

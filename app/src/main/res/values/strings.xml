@@ -1,4 +1,7 @@
 <resources>
-  <string name="app_name">CaiNiaoPractice</string>
-  <string name="welcome">进入应用</string>
+    <string name="app_name">CaiNiaoPractice</string>
+    <string name="welcome">进入应用</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -14,10 +14,14 @@ import android.app.Application;
 
 
 public class CNApplication extends Application {
+    private static CNApplication mContext;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mContext = this;
+    }
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-
-  }
+    public static CNApplication getmContext() {
+        return mContext;
+    }
 }
