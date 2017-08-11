@@ -15,6 +15,7 @@ import android.app.Application;
 
 public class CNApplication extends Application {
     private static CNApplication mContext;
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -4,4 +4,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="tabArray">
+        <item>全部</item>
+        <item>O2O</item>
+        <item>氯TV</item>
+        <item>新硬件</item>
+        <item>Fun</item>
+    </string-array>
 </resources>

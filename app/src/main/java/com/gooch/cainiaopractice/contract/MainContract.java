@@ -17,7 +17,7 @@ public interface MainContract {
 
     }
 
-    interface View extends IBaseView{
+    interface View extends IBaseView {
 
     }
 

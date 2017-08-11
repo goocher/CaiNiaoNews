@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.gooch.cainiaopractice.utils.StatusBarUtils;
+
 /**
  * <pre>
  *     author : gooch
@@ -24,7 +26,7 @@ public abstract class BaseActivity<T extends ViewDataBinding> extends AppCompatA
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, getLayoutId());
-//        StatusBarUtils.setTranslucent(this);
+        StatusBarUtils.setTranslucent(this);
         init();
     }
 

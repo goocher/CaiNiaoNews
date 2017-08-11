@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 public abstract class BaseFragment<T extends ViewDataBinding> extends Fragment implements IBaseView {
     protected Activity mActivity;
-    private T mBinding;
+    protected T mBinding;
     private boolean mIsPrepared;
     private boolean mIsFirstLoad = true;
 
