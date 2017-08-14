@@ -41,5 +41,7 @@ dependencies {
     compile "com.tbruyelle.rxpermissions2:rxpermissions:$var.rxpermissions2"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile "com.android.support:support-v4:$var.supportLibraryVersion"
+    //BaseRecyclerViewAdapterHelper
+    compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:$var.baseRecyclerViewHelper"
     testCompile 'junit:junit:4.12'
 }

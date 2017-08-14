@@ -15,9 +15,6 @@ import com.gooch.cainiaopractice.databinding.ActivityWelcomeBinding;
 public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding> implements OnClickListener,
         OnCompletionListener {
 
-    private ActivityWelcomeBinding welcomeBinding;
-
-
     @Override
     protected int getLayoutId() {
         return R.layout.activity_welcome;
@@ -25,32 +22,26 @@ public class WelcomeActivity extends BaseActivity<ActivityWelcomeBinding> implem
 
     @Override
     protected void init() {
-        //当系统版本为4.4或者4.4以上时可以使用沉浸式状态栏
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            //透明状态栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            //透明导航栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-        }
-        welcomeBinding.videoViewWelcome
+
+        mBinding.videoViewWelcome
                 .setVideoURI(Uri.parse("android.resource://" + this.getPackageName() + "/" + R.raw.kr36));
-        welcomeBinding.videoViewWelcome.start();
-        welcomeBinding.btnWelcome.setOnClickListener(this);
-        welcomeBinding.videoViewWelcome.setOnCompletionListener(this);
+        mBinding.videoViewWelcome.start();
+        mBinding.btnWelcome.setOnClickListener(this);
+        mBinding.videoViewWelcome.setOnCompletionListener(this);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (welcomeBinding.videoViewWelcome != null && welcomeBinding.videoViewWelcome.isPlaying()) {
-            welcomeBinding.videoViewWelcome.stopPlayback();
+        if (mBinding.videoViewWelcome != null && mBinding.videoViewWelcome.isPlaying()) {
+            mBinding.videoViewWelcome.stopPlayback();
         }
     }
 
     @Override
     public void onClick(View v) {
-        if (welcomeBinding.videoViewWelcome != null && welcomeBinding.videoViewWelcome.isPlaying()) {
-            welcomeBinding.videoViewWelcome.stopPlayback();
+        if (mBinding.videoViewWelcome != null && mBinding.videoViewWelcome.isPlaying()) {
+            mBinding.videoViewWelcome.stopPlayback();
         }
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

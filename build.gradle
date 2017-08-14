@@ -15,27 +15,29 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 ext {
     var = [
             // SDK And Tools
-            applicationId        : "com.gooch.cainiaopractice",
-            minSdkVersion        : 15,
-            targetSdkVersion     : 25,
-            compileSdkVersion    : 25,
-            buildToolsVersion    : "25.0.3",
-            versionName          : "1.0.0",
-            versionCode          : 1,
-            supportLibraryVersion: "25.3.1",
+            applicationId         : "com.gooch.cainiaopractice",
+            minSdkVersion         : 15,
+            targetSdkVersion      : 25,
+            compileSdkVersion     : 25,
+            buildToolsVersion     : "25.0.3",
+            versionName           : "1.0.0",
+            versionCode           : 1,
+            supportLibraryVersion : "25.3.1",
             //dependencies
-            okgo                 : "3.0,4",
-            okrx2                : "2.0.2",
-            rxjava2              : "2.1.2",
-            rxbinding2           : "2.0.0",
-            gson                 : "2.7",
-            rxpermissions2       : "0.9.4@aar",
-            glide                : "4.0.0"
+            okgo                  : "3.0,4",
+            okrx2                 : "2.0.2",
+            rxjava2               : "2.1.2",
+            rxbinding2            : "2.0.0",
+            gson                  : "2.7",
+            rxpermissions2        : "0.9.4@aar",
+            glide                 : "4.0.0",
+            baseRecyclerViewHelper: "2.9.22"
     ]
 }
 
